@@ -1,0 +1,385 @@
+/* Reset geral */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+
+/* Base do site */
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background-color: #0f0f14; /* dark anime vibes */
+  color: #ffffff;
+  min-height: 100vh;
+  line-height: 1.5;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+h1.title-large {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  color: #00bfff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00bfff, 0 0 20px #00bfff;
+}
+
+h2.title-medium {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: #00bfff;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 6px #00bfff, 0 0 15px #00bfff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items:center;
+  overflow: hidden;
+  width: 80%;
+  gap: 40px;
+  height: 100px;
+  padding: 30px 30px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  background: linear-gradient(180deg, #0b0b0b, #121212);
+
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 18%,
+    100% 100%,
+    4% 100%,
+    0 82%
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(0, 180, 255, 0.6);
+  clip-path: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    0 0 10px rgba(0, 180, 255, 0.6),
+    0 0 25px rgba(0, 180, 255, 0.4),
+    inset 0 0 10px rgba(0, 180, 255, 0.25);
+}
+
+
+.logo{
+  height: 42px;
+  cursor: pointer;
+}
+
+.nav-bar{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.main-watch{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 60px;
+  align-items:center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0b0b0b, #121212);
+
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 18%,
+    100% 100%,
+    4% 100%,
+    0 82%
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.main-watch::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(0, 180, 255, 0.6);
+  clip-path: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    0 0 10px rgba(0, 180, 255, 0.6),
+    0 0 25px rgba(0, 180, 255, 0.4),
+    inset 0 0 10px rgba(0, 180, 255, 0.25);
+}
+
+.search-area{
+  padding: 12px 24px;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.find-bar{
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 180, 255, 0.6);
+  outline: none;
+}
+
+.find-anime {
+  padding: 9px 0;
+  border-radius: 20px;
+  width: 30%;
+  cursor: pointer;
+
+  background-color: #0b0b0b; /* cor base escura */
+  color: white;
+  border: 2px solid cyan;   /* opcional, dá contorno */
+  transition: all 0.3s ease; /* faz o hover ficar suave */
+}
+
+.find-anime:hover {
+  background-color: #00bfff;  /* azul neon */
+  color: #fff;
+  box-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff;
+  transform: scale(1.05); /* botão cresce levemente */
+}
+
+#main-title{
+  cursor:default;
+}
+
+.watching-now{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+}
+
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.anime-card{
+  border-radius: 30px;
+  background: #121212;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card img{
+  width: 100%;
+  display: block;
+}
+
+.anime-card-info{
+  padding-top: 30px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.anime-card-info h2{
+  margin-bottom: 20px;
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+.anime-card-info p {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.anime-card-info button {
+  width: 42px;
+  height: 32px;
+  background-image: url(./assets/images/settings.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.anime-card-info button:hover {
+  filter: drop-shadow(0 0 5px #00bfff);
+}
+
+.main-choose{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+  align-items:center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0b0b0b, #121212);
+
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 18%,
+    100% 100%,
+    4% 100%,
+    0 82%
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.main-choose::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(0, 180, 255, 0.6);
+  clip-path: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    0 0 10px rgba(0, 180, 255, 0.6),
+    0 0 25px rgba(0, 180, 255, 0.4),
+    inset 0 0 10px rgba(0, 180, 255, 0.25);
+}
+
+.cards-choose-container{
+  display: flex;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.anime-choose-card{
+  position: relative;
+  display: none;
+}
+
+.anime-name{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+
+}
+
+.add-anime-bt{
+  width: 40%;
+  background-image: url(/assets/images/addtolist.png);
+  background-position: center;
+  background-color: green;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 15px 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.add-anime-bt:hover {
+  filter: drop-shadow(0 0 5px #00bfff);
+  background-color: #00bfff;
+} 
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 180, 255, 0.3);
+}
+
+.close-popup-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s;
+}
+
+.close-popup-btn:hover {
+  color: #00bfff;
+  transform: rotate(90deg);
+}
+
+.popup-overlay {
+  display: none !important; /* força a ficar visível */
+  position: absolute;
+}
+
+.popup-overlay::before{
+  content: "";
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  margin: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-config{
+  z-index: 99;
+  padding: 20px 40px;
+  background: linear-gradient(180deg, #0b0b0b, #121212);
+
+  clip-path: polygon(
+    0 0,
+    96% 0,
+    100% 18%,
+    100% 100%,
+    4% 100%,
+    0 82%
+  );
+
+  border: 1px solid rgba(0, 180, 255, 0.6);
+  box-shadow:
+    0 0 10px rgba(0, 180, 255, 0.6),
+    0 0 25px rgba(0, 180, 255, 0.4),
+    inset 0 0 10px rgba(0, 180, 255, 0.25);
+}

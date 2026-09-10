@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watching</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="header">
+    <a href="../index.html"><img src="../assets/images/logo.png" alt="AniZen logo" class="logo"></a>
+    <nav class="nav-bar">
+      <a href="watching.html">Watching</a>
+      <a href="chooseanime.html">Choose the animes</a>
+      <a href="#">Completed!</a>
+      <a href="#">Tier List</a>
+    </nav>
+  </div>
+  
+  <main class="main-watch">
+    <section class="search-area">
+      <input type="text" placeholder="Type the anime name" class="find-bar">
+      <button class="find-anime">Find</button>
+    </section>
+    <section class="watching-now">
+      <h1 id="main-title">Watching</h1>
+
+      <div class="cards-container" id="watching-cards">
+        <!-- cards entram aqui via JS -->
+      </div>
+    </section>
+
+    <!-- POPUP AQUI FORA, não dentro do watching-cards -->
+    <div class="popup-overlay" id="popup-overlay">
+      <div class="popup-config">
+        <div class="popup-header">
+          <h2>Anime Settings</h2>
+          <button class="close-popup-btn">✕</button>
+        </div>
+        <div class="popup-content">
+          <div class="image-content">
+            <img src="../assets/images/card-example.jpg">
+            <div class="bottom-left">Anime Name</div>
+          </div>
+          <div class="information-cfg">
+            <p></p>
+            <div class="episode-control">
+              <label>Episode:</label>
+              <div class="control-buttons">
+                <button class="decrease-btn">-</button>
+                <input type="number" class="episode-input" value="1" min="1">
+                <button class="increase-btn">+</button>
+              </div>
+            </div>
+            <div class="season-control">
+              <label>Season:</label>
+              <div class="season-buttons">
+                <button class="decrease-btn">-</button>
+                <input type="number" class="season-input" value="1" min="1">
+                <button class="increase-btn">+</button>
+              </div>
+            </div>
+            <button class="delete-content">Delete Anime From List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script src="../script.js"></script>
+</body>
+</html>

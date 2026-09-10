@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose the anime</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="header">
+    <a href="../index.html"><img src="../assets/images/logo.png" alt="AniZen logo" class="logo"></a>
+    <nav class="nav-bar">
+      <a href="watching.html">Watching</a>
+      <a href="chooseanime.html">Choose the animes</a>
+      <a href="#">Completed!</a>
+      <a href="#">Tier List</a>
+    </nav>
+  </div>
+
+  <main class="main-choose">
+    <h1 id="main-title">What's Your Choice?</h1>
+    <section class="search-area">
+      <input type="text" placeholder="Type the anime name" class="find-bar">
+      <button class="find-anime">Find</button>
+    </section>
+    <section class="anime-list">
+       <div class="cards-choose-container">
+        <div class="anime-choose-card">
+          <img id="anime-img" alt="Anime cover">
+            <div class="anime-name">
+              <h2 id="anime-name-title"></h2>
+              <button class="add-anime-bt"></button>
+            </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <script src="../script.js"></script>
+</body>
+</html>
